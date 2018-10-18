@@ -24,7 +24,16 @@ before_install:
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
 
-install:
-  - docker-compose up --build
+before_script:
+  - yarn install
+  - yarn install -g standard
+  - docker-compose build
+  - docker-compose up -d
+  - sleep 3
+script:
   - cd tests
   - yarn install
+  - yarn test
+
+  after_script:
+  - docker-compose kill
