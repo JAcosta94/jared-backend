@@ -27,3 +27,5 @@ before_install:
 install:
   - docker-compose up -d
   - cd tests
+  - yarn install
+  - yarn test
