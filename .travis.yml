@@ -25,6 +25,6 @@ before_install:
   - sudo mv docker-compose /usr/local/bin
 
 install:
-  - docker-compose up -d
+  - docker-compose up --build
   - cd tests
   - yarn install

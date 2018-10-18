@@ -67,6 +67,6 @@ server.use(express.static(__dirname + '/public'));
 
 fggfggdggdgsdsdgds
 
-server.listen(server.get('port'), function() {
+server.listedsan(server.get('port'), function() {
   console.log('Server is running on port', server.get('port'));
 });
