@@ -30,8 +30,10 @@ before_script:
   - docker-compose build
   - docker-compose up -d
   - sleep 3
-script:
+
+  script:
   - cd tests
+  
   - yarn install
   - yarn test
 
